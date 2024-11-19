@@ -1,3 +1,119 @@
-.ehe {
-  color: red;
+@import url("https://fonts.cdnfonts.com/css/ds-digital");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 36px;
+  background-color: #333;
+  min-height: 300px;
+  min-height: 400px;
+  border-radius: 16px;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.calculator {
+  display: grid;
+  gap: 8px;
+  position: relative;
+}
+
+.calculator .value {
+  grid-column: span 4;
+  height: 96px;
+  width: calc(100% - 12px);
+  background-color: #a7af7c;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 36px;
+  outline: none;
+  margin-bottom: 8px;
+  text-align: right;
+  padding-right: 1rem;
+  font-family: "DS-Digital", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.calculator button {
+  border: none;
+  width: 76px;
+  height: 76px;
+  background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+  color: white;
+  position: relative;
+}
+
+.calculator button::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  right: 10px;
+  bottom: 10px;
+  background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+  border-radius: 8px;
+  box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+    10px 5px 10px rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.27);
+  border-top: 1px solid rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.27);
+}
+
+.calculator button p {
+  position: relative;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.calculator button:active {
+  filter: brightness(1.5);
+}
+
+.calculator button.clear {
+  background: #800000;
+}
+
+.calculator button.equal {
+  background: #1679ab;
+}
+
+.calculator button.equal::before {
+  content: "";
+  background: linear-gradient(90deg, #1679ab, rgba(255, 255, 255, 0.25));
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.calculator button.clear::before {
+  content: "";
+  background: linear-gradient(90deg, #b30000, rgba(255, 255, 255, 0.25));
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.calculator button.equal {
+  grid-row: span 2;
+  height: 160px;
 }

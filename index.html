@@ -6,13 +6,35 @@
     <title>Document</title>
   </head>
   <body>
-    <p class="ehe">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, adipisci
-      modi itaque natus, iure molestiae consequatur magnam explicabo ea, aut
-      praesentium corrupti delectus obcaecati ad eos illum sint voluptatum
-      culpa.
-    </p>
+    <div class="container">
+      <div class="calculator">
+        <input class="value" readonly />
 
+        <button class="num clear" id="clear" data-button="C"><p>C</p></button>
+        <button class="num" data-button="CE"><p>CE</p></button>
+        <button class="num" data-button="/"><p>/</p></button>
+        <button class="num" data-button="*"><p>*</p></button>
+
+        <button class="num" data-button="7"><p>7</p></button>
+        <button class="num" data-button="8"><p>8</p></button>
+        <button class="num" data-button="9"><p>9</p></button>
+        <button class="num" data-button="-"><p>-</p></button>
+
+        <button class="num" data-button="4"><p>4</p></button>
+        <button class="num" data-button="5"><p>5</p></button>
+        <button class="num" data-button="6"><p>6</p></button>
+        <button class="num" data-button="+"><p>+</p></button>
+
+        <button class="num" data-button="1"><p>1</p></button>
+        <button class="num" data-button="2"><p>2</p></button>
+        <button class="num" data-button="3"><p>3</p></button>
+        <button class="num equal" data-button="="><p>=</p></button>
+
+        <button class="num" data-button="0"><p>0</p></button>
+        <button class="num" data-button="00"><p>00</p></button>
+        <button class="num" data-button="."><p>.</p></button>
+      </div>
+    </div>
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
